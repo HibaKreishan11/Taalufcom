@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orphan Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        img {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="homepage.html" class="black">Programs</a>
+            <a href="index.html" class="black">Log Out</a>
+    
+        </div>
+    </header>
+    <div class="main-content">
+        <img src="boy.png" alt="Boy">
+        <img src="girl.png" alt="Girl">
+        <ul>
+            <li>
+                <h3>Money Donation</h3>
+                <select name="money-donation-amount" id="money-donation-amount">
+                    <option value="10">10 JOD</option>
+                    <option value="20">20 JOD</option>
+                    <option value="30">30 JOD</option>
+                </select>
+            </li>
+            <li>
+                <h3>Clothes</h3>
+                <input type="checkbox" id="clothes" name="clothes" value="clothes">
+                <label for="clothes">Donate Clothes</label>
+            </li>
+            <li>
+                <h3>Toys</h3>
+                <input type="checkbox" id="toys" name="toys" value="toys">
+                <label for="toys">Donate Toys</label>
+            </li>
+        </ul>
+  	
+<div style="display: flex; justify-content: center; margin-top: -4px;"> <!-- Adjusted margin-top value -->
+        <button style="padding: 15px 30px; background-color: 	#74b4c4
+
+; border: none; color: white; border-radius: 10px; cursor: pointer; font-size: 16px;" onclick="showConfirmation()">DONATE ORPHAN</button>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            var amount = document.getElementById('money-donation-amount').value;
+            var clothesChecked = document.getElementById('clothes').checked;
+            var toysChecked = document.getElementById('toys').checked;
+
+            var message = "Your amount of money donation is: " + amount + " JOD";
+
+            if (clothesChecked && toysChecked) {
+                message += "\nClothes added!\nToys added!";
+            } else if (clothesChecked) {
+                message += "\nClothes added!";
+            } else if (toysChecked) {
+                message += "\nToys added!";
+            }
+
+            alert(message);
+        }
+    </script>
+</body>
+</html>

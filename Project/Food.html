@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        img {
+            width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2, .box h3 {
+            color: #333;
+        }
+
+        .box p {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="homepage.html" class="black">Programs</a>
+            <a href="index.html" class="black">Log Out</a>
+          
+        </div>
+    </header>
+    <div class="main-content">
+        <img src="foodp.png" alt="Food Donation">
+        <div class="box">
+            <h2>Donate food baskets!</h2>
+            <p>Choose the size of food basket you would like to donate:</p>
+            <label>
+                <input type="checkbox" name="food-basket" value="1-2 persons"> Food Basket for 1-2 persons for 15JOD
+            </label>
+            <label>
+                <input type="checkbox" name="food-basket" value="3-5 persons"> Food Basket for 3-5 persons for 25JOD
+            </label>
+            <label>
+                <input type="checkbox" name="food-basket" value="6-7 persons"> Food Basket for 6-7 persons for 35JOD
+            </label>
+        </div>
+    </div>
+	
+<div style="display: flex; justify-content: center; margin-top: -70px;"> <!-- Adjusted margin-top value -->
+        <button style="padding: 15px 30px; background-color: 	#9ACD32; border: none; color: white; border-radius: 10px; cursor: pointer; font-size: 16px;" onclick="showConfirmation()">DONATE FOOD</button>
+    </div>
+            </div>
+
+   <script>
+        function showConfirmation() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            if (checkboxes.length === 0) {
+                alert("Please select a basket size!!");
+            } else {
+                var selectedSizes = [];
+                checkboxes.forEach(function(checkbox) {
+                    selectedSizes.push(checkbox.value);
+                });
+                var message = "Your Basket size is: " + selectedSizes.join(", ");
+                alert(message);
+            }
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

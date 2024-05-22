@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Taalufcom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        img {
+            width: 300px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2, .box h3 {
+            color: #333;
+        }
+
+        .box p {
+            color: #666;
+        }
+
+        .box a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+          
+            <a href="index.html" class="black">Log Out</a>
+      
+        </div>
+    </header>
+    <div class="main-content">
+        <h1>Our Programs</h1>
+        <div class="images">
+            <a href="blood.html"><img src="bloodp.png" alt="Blood Donation"></a>
+            <a href="food.html"><img src="foodp.png" alt="Food Donation"></a>
+            <a href="orphan.html"><img src="orphanp.png" alt="Orphan Support"></a>
+            <a href="school.html"><img src="schoolp.png" alt="School Support"></a> <!-- Added schoolp.png image -->
+        </div>
+        <div class="section">
+            <div class="box">
+                <h2><a href="blood.html">Blood Donation</a></h2>
+                <p>Save lives by donating blood. It's a safe process that won't take more than 10-15 minutes.</p>
+            </div>
+            <div class="box">
+                <h2><a href="food.html">Food Donation</a></h2>
+                <p>Help feed the hungry by donating food items. Every contribution counts.</p>
+            </div>
+            <div class="box">
+                <h2><a href="orphan.html">Orphan Donation</a></h2>
+                <p>Provide support and care for orphans in need. Your help can make a difference in their lives.</p>
+            </div>
+            <div class="box">
+                <h2><a href="school.html">School Donation</a></h2>
+                <p>Support education by providing resources for schools. Education is the key to a brighter future.</p>
+            </div> <!-- Added school support box -->
+        </div>
+    </div>
+</body>
+</html>

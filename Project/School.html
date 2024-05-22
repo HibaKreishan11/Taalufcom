@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Support - Taalufcom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        img {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .donate-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+
+        .donate-option {
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .radio-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-option label {
+            margin-left: 5px;
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .book-options {
+            margin-bottom: 50px;
+        }
+
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+            margin: 10px auto;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #A52A2A
+;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="homepage.html" class="black">Programs</a>
+            <a href="index.html" class="black">Log Out</a>
+            
+        </div>
+    </header>
+    <div class="main-content">
+        <h1>School Support</h1>
+        <img src="schoolp.png" alt="School Support">
+
+        <div class="donate-options">
+            <div class="donate-option">
+                <h2>SEATS!</h2>
+                <img src="seats.png" alt="Seats">
+				<h3> Enter number of seats </>
+                <input type="text" id="seatCount" placeholder="Enter number of seats">
+            </div>
+
+            <div class="donate-option">
+                <h2>UNIFORMS!</h2>
+                <img src="uniform.png" alt="Uniform">
+                <div class="radio-options">
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donate-option">
+                <h2>BOOKS!</h2>
+                <img src="books.png" alt="Books">
+                <div class="book-options">
+                    <select id="bookType" name="bookType">
+                        <option value="arabic">Arabic Books</option>
+                        <option value="english">English Books</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="showConfirmation()">DONATE SCHOOL</button>
+    </div>
+	<script>
+    function showConfirmation() {
+        const seats = document.getElementById("seatCount").value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const bookType = document.getElementById("bookType").value;
+
+        let message = "Thank you for your donation!\n\n";
+
+        if (seats !== "") {
+            message += `Number of seats: ${seats}\n`;
+        }
+
+        if (gender) {
+            message += `Student Uniform Type: ${gender.value}\n`;
+        }
+
+        if (bookType !== "") {
+            message += `Books Language: ${bookType}\n`;
+        }
+
+        alert(message);
+    }
+</script>
+
+</body>
+</html>
